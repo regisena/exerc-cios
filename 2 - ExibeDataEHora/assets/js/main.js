@@ -1,5 +1,3 @@
-
-
 function selecionaDiaSemana(diaSemana){
     switch (diaSemana) {
         case 0:
@@ -93,7 +91,6 @@ const diaSemana = data.getDay();
         
 const diaSelecionado = selecionaDiaSemana(diaSemana);
 
-const resultado = document.querySelector('#data');
-
+const resultado = document.querySelector('.container h1');
 
 resultado.innerHTML = `${diaSelecionado}, ${formataData(data)}`;
