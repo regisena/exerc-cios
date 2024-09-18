@@ -32,8 +32,8 @@ function formataData(data){
     const dia   = data.getDate();
     const mes   = defineMesPorExtenso(data);
     const ano   = data.getFullYear();
-    const hora  = data.getHours();
-    const min   = zeroAEsquerdaMinutos(data.getMinutes());
+    const hora  = zeroAEsquerdaHoraMinutos(data.getHours());
+    const min   = zeroAEsquerdaHoraMinutos(data.getMinutes());
 
     return `${dia} de ${mes} de ${ano} ${hora}:${min}`;
     
@@ -85,7 +85,7 @@ function defineMesPorExtenso(data){
 
 }
 
-function zeroAEsquerdaMinutos(num){
+function zeroAEsquerdaHoraMinutos(num){
     return num >= 10 ? num : `0${num}`;
 }
 
